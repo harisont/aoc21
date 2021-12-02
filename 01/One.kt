@@ -1,26 +1,34 @@
 import java.io.File
 
-fun nIncreases(path: String): Int {
-    val lines = File(path).readLines()
+fun readInts(path: String): List<Int> {
+    return File(path).readLines().map{ it.toInt() }
+}
+
+fun nIncreases(ints: List<Int>): Int {
     var increases = 0
-    for (i in 0..lines.size - 2) {
-        if (lines[i + 1].toInt() > lines[i].toInt())
+    for (i in 0..ints.size - 2) {
+        if (ints[i + 1] > ints[i])
             increases++
     }
     return increases
 }
 
-fun n3Increases(path: String): Int {
-    val lines = File(path).readLines()
+fun n3Increases(ints: List<Int>): Int {
     var increases = 0
-    for (i in 0..lines.size - 4) {
-        if (lines[i + 1].toInt() + lines[i + 2].toInt() + lines[i + 3].toInt() > lines[i].toInt() + lines[i + 1].toInt() + lines[i + 2].toInt())
+    for (i in 0..ints.size - 4) {
+        if (ints.slice(i + 1..i + 3).sum() > ints.slice(i..i + 2).sum())
             increases++
     }
     return increases
+}
+
+fun test01(ints: List<Int>) {
+    assert(nIncreases(ints) == 1696)
+    assert(n3Increases(ints) == 1737)
 }
 
 fun main() {
-    println(nIncreases("input.txt"))
-    println(n3Increases("input.txt"))
+    val ints = readInts("input.txt")
+    println("Part 1: ${nIncreases(ints)}")
+    println("Part 2: ${n3Increases(ints)}")
 }

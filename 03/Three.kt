@@ -7,6 +7,7 @@ fun readDiagnostic(path: String): Array<Array<Int>> {
     }.toTypedArray()
 }
 
+// TODO: generalize to reuse e.g. in advent 4
 fun transpose(xs: Array<Array<Int>>): Array<Array<Int>> {
     val cols = xs[0].size // 3
     val rows = xs.size // 2

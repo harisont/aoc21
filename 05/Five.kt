@@ -60,16 +60,16 @@ fun linesOfVents2Diagram(lines: List<LineOfVents>): Diagram {
     val nonDiagonals = lines.filter { ! it.isDiagonal() }
     val rows = nonDiagonals.map { maxOf(it.y1(), it.y2()) }.maxOrNull()
     val cols = nonDiagonals.map { maxOf(it.x1(), it.x2()) }.maxOrNull()
-    var diagram = Array(rows!!) { Array(cols!!) { 0 } }
+    var diagram = Array(rows!! + 1) { Array(cols!! + 1) { 0 } }
     for (line in nonDiagonals) {
         if (line.isHorizontal()) {
-            for (y in line.y1()..line.y2()) {
-                diagram[line.x1()][y] += 1
+            for (y in minOf(line.y1(), line.y2())..maxOf(line.y1(), line.y2())) {
+                diagram[y][line.x1()] += 1
             }
         }
         else { // vertical line
-            for (x in line.x1()..line.x2()) {
-                diagram[x][line.y1()] += 1
+            for (x in minOf(line.x1(), line.x2())..maxOf(line.x1(), line.x2())) {
+                diagram[line.y1()][x] += 1
             }
         }
     }
@@ -86,7 +86,12 @@ fun nOverlaps(diagram: Diagram): Int {
     return n
 }
 
+fun test05(linesOfVents: List<LineOfVents>) {
+    assert(nOverlaps(linesOfVents2Diagram(linesOfVents)) == 6461)
+}
+
 fun main() {
     val linesOfVents = readLinesOfVents("input.txt")
+    test05(linesOfVents)
     println("Part 1: ${nOverlaps(linesOfVents2Diagram(linesOfVents))}")
 }

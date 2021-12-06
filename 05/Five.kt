@@ -1,3 +1,5 @@
+package aoc.days.five
+
 import java.io.File
 
 typealias Point = Pair<Int,Int>

@@ -1,3 +1,5 @@
+package aoc.days.two 
+
 import java.io.File
 
 fun readRoute(path: String): List<Pair<String,Int>> {

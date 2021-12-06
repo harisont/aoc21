@@ -1,3 +1,5 @@
+package aoc.days.three
+
 import java.io.File
 
 fun readDiagnostic(path: String): Array<Array<Int>> {
@@ -7,16 +9,14 @@ fun readDiagnostic(path: String): Array<Array<Int>> {
     }.toTypedArray()
 }
 
-// TODO: generalize to reuse e.g. in advent 4
-fun transpose(xs: Array<Array<Int>>): Array<Array<Int>> {
-    val cols = xs[0].size // 3
-    val rows = xs.size // 2
-    var ys = Array(cols) { Array(rows) { 0 } }
-    for (i in 0..rows - 1) {
-        for (j in 0..cols - 1)
-            ys[j][i] = xs[i][j]
+inline fun <reified T> transpose(xs: Array<Array<T>>): Array<Array<T>> {
+    val cols = xs[0].size
+    val rows = xs.size
+    return Array(cols) { j ->
+        Array(rows) { i -> 
+            xs[i][j]
+        }
     }
-    return ys
 }
 
 fun complement(n: Array<Int>): Array<Int> {

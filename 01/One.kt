@@ -1,3 +1,5 @@
+package aoc.days.one
+
 import java.io.File
 
 fun readInts(path: String): List<Int> {

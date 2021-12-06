@@ -1,4 +1,7 @@
+package aoc.days.four
+
 import java.io.File
+import aoc.days.three.transpose as transpose
 
 class Cell(val n: Int, var marked: Boolean = false)
 
@@ -33,17 +36,6 @@ fun mark(n: Int, board: Board): Board {
         }
     }
     return board
-}
-
-fun transpose(xs: Array<Array<Cell>>): Array<Array<Cell>> {
-    val cols = xs[0].size 
-    val rows = xs.size
-    var ys = Array(cols) { Array(rows) { Cell(0) } }
-    for (i in 0..rows - 1) {
-        for (j in 0..cols - 1)
-            ys[j][i] = xs[i][j]
-    }
-    return ys
 }
 
 fun hasWon(board: Board): Boolean {

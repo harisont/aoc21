@@ -1,7 +1,7 @@
-package aoc.days.four
+package bho.harisont.aoc
 
 import java.io.File
-import aoc.days.three.transpose as transpose
+import bho.harisont.aoc.transpose as transpose
 
 class Cell(val n: Int, var marked: Boolean = false)
 
@@ -79,7 +79,7 @@ fun test04(bingo: Bingo) {
 }
 
 fun main() {
-    val bingo = readBingo("input.txt")
+    val bingo = readBingo("../data/day04.txt")
     val win = playBingo(bingo)
     println("Part 1: ${score(win)}")
 }

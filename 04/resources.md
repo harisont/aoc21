@@ -1,4 +1,0 @@
-- defining Kotlin [classes](https://kotlinlang.org/docs/classes.html)
-- [split](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/split.html) method
-- [slice](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/slice.html) method
-- [type aliases](https://kotlinlang.org/docs/type-aliases.html) (aka type synonyms)

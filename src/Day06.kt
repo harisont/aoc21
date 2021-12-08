@@ -1,9 +1,11 @@
+package bho.harisont.aoc
+
 import java.io.File
 
 typealias Lanternfish = Int
 
 fun main() {
-    val fish = File("input.txt")
+    val fish = File("../data/day06.txt")
                 .readText()
                 .replace("\n", "")
                 .split(",")

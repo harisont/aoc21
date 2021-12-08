@@ -1,4 +1,4 @@
-package aoc.days.three
+package bho.harisont.aoc
 
 import java.io.File
 
@@ -47,7 +47,7 @@ fun test03(diagnostic: Array<Array<Int>>) {
 }
 
 fun main() {
-    val diagnostic = readDiagnostic("input.txt")
+    val diagnostic = readDiagnostic("../data/day03.txt")
     test03(diagnostic)
     println("Part 1: ${powerConsumption(diagnostic)}")
     //val (h2,d2) = finalPosition2(route)

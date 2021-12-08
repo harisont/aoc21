@@ -1,4 +1,4 @@
-package aoc.days.two 
+package bho.harisont.aoc
 
 import java.io.File
 
@@ -44,7 +44,7 @@ fun test02(route: List<Pair<String,Int>>) {
 }
 
 fun main() {
-    val route = readRoute("input.txt")
+    val route = readRoute("../data/day02.txt")
     test02(route)
     val (h1,d1) = finalPosition1(route)
     println("Part 1: ${h1 * d1}")

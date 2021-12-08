@@ -1,3 +1,0 @@
-- [`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/)
-- [generalizing `transpose`](https://stackoverflow.com/questions/70230712/generic-transpose-or-anything-else-really-in-kotlin/70230823#70230823) (or anything else that has something to do with arrays really)
-- [import weirdnesses](https://stackoverflow.com/questions/48796929/kotlin-cannot-import-packages)

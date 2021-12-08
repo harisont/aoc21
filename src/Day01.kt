@@ -1,4 +1,4 @@
-package aoc.days.one
+package bho.harisont.aoc
 
 import java.io.File
 
@@ -30,7 +30,7 @@ fun test01(ints: List<Int>) {
 }
 
 fun main() {
-    val ints = readInts("input.txt")
+    val ints = readInts("../data/day01.txt")
     test01(ints)
     println("Part 1: ${nIncreases(ints)}")
     println("Part 2: ${n3Increases(ints)}")

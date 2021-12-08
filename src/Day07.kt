@@ -1,3 +1,5 @@
+package bho.harisont.aoc
+
 import java.io.File
 import kotlin.math.abs
 
@@ -20,7 +22,7 @@ fun minCost(positions: MutableList<Pos>): Pos {
 
 fun main () {
     // TODO: generalize to also use in Six (and more), readCommaSeparatedInts
-    val positions = File("input.txt")
+    val positions = File("../data/day07.txt")
                         .readText()
                         .replace("\n", "")
                         .split(",")

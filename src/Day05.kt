@@ -1,4 +1,4 @@
-package aoc.days.five
+package bho.harisont.aoc
 
 import java.io.File
 
@@ -93,7 +93,7 @@ fun test05(linesOfVents: List<LineOfVents>) {
 }
 
 fun main() {
-    val linesOfVents = readLinesOfVents("input.txt")
+    val linesOfVents = readLinesOfVents("../data/day05.txt")
     test05(linesOfVents)
     println("Part 1: ${nOverlaps(linesOfVents2Diagram(linesOfVents))}")
 }

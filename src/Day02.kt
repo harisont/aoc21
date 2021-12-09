@@ -1,4 +1,4 @@
-package bho.harisont.aoc
+package bho.harisont.aoc.day02
 
 import java.io.File
 
@@ -36,18 +36,14 @@ fun finalPosition2(route: List<Pair<String,Int>>): Pair<Int,Int> {
     return Pair(h,d)
 }
 
-fun test02(route: List<Pair<String,Int>>) {
+fun part1(path: String): Int {
+    val route = readRoute(path)
     val (h1,d1) = finalPosition1(route)
-    assert(h1 * d1 == 1507611)
-    val (h2,d2) = finalPosition2(route)
-    assert(h2 * d2 == 1880593125)
+    return h1 * d1
 }
 
-fun main() {
-    val route = readRoute("../data/day02.txt")
-    test02(route)
-    val (h1,d1) = finalPosition1(route)
-    println("Part 1: ${h1 * d1}")
-    val (h2,d2) = finalPosition2(route)
-    println("Part 2: ${h2 * d2}")
+fun part2(path: String): Int {
+    val route = readRoute(path)
+    val (h1,d1) = finalPosition2(route)
+    return h1 * d1
 }

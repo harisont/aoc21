@@ -1,4 +1,4 @@
-package bho.harisont.aoc
+package bho.harisont.aoc.day05
 
 import java.io.File
 
@@ -92,8 +92,6 @@ fun test05(linesOfVents: List<LineOfVents>) {
     assert(nOverlaps(linesOfVents2Diagram(linesOfVents)) == 6461)
 }
 
-fun main() {
-    val linesOfVents = readLinesOfVents("../data/day05.txt")
-    test05(linesOfVents)
-    println("Part 1: ${nOverlaps(linesOfVents2Diagram(linesOfVents))}")
-}
+fun part1(path: String): Int = 
+    nOverlaps(linesOfVents2Diagram(readLinesOfVents(path)))
+fun part2(path: String): Int? = null

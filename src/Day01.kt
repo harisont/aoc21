@@ -1,10 +1,11 @@
-package bho.harisont.aoc
+package bho.harisont.aoc.day01
 
 import java.io.File
 
-fun readInts(path: String): List<Int> {
+fun readReport(path: String): List<Int> {
     return File(path).readLines().map{ it.toInt() }
 }
+
 
 fun nIncreases(ints: List<Int>): Int {
     var increases = 0
@@ -24,14 +25,5 @@ fun n3Increases(ints: List<Int>): Int {
     return increases
 }
 
-fun test01(ints: List<Int>) {
-    assert(nIncreases(ints) == 1696)
-    assert(n3Increases(ints) == 1737)
-}
-
-fun main() {
-    val ints = readInts("../data/day01.txt")
-    test01(ints)
-    println("Part 1: ${nIncreases(ints)}")
-    println("Part 2: ${n3Increases(ints)}")
-}
+fun part1(path: String): Int = nIncreases(readReport(path))
+fun part2(path: String): Int = n3Increases(readReport(path))

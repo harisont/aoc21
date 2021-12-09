@@ -1,4 +1,4 @@
-package bho.harisont.aoc
+package bho.harisont.aoc.day09
 
 import java.io.File
 import kotlin.text.toCharArray
@@ -36,11 +36,10 @@ fun lowPoints(heatmap: Heatmap): List<Int> {
     return lowPoints
 }
 
-fun riskLevel(n: Int): Int {
-    return n + 1
-}
+fun riskLevel(n: Int): Int = n + 1
 
-fun main() {
-    val heatmap = readHeatmap("../data/day09.txt")
-    println("Part 1: ${lowPoints(heatmap).map { riskLevel(it) }.sum() }")
-}
+
+fun part1(path: String): Int = lowPoints(readHeatmap(path))
+                                .map { riskLevel(it) }
+                                .sum() 
+fun part2(path: String): Int? = null

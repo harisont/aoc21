@@ -1,4 +1,4 @@
-package bho.harisont.aoc
+package bho.harisont.aoc.day08
 
 import java.io.File
 import kotlin.text.toCharArray
@@ -25,7 +25,5 @@ fun nEasyDigits(notes: List<Note>): Int {
     return n
 }
 
-fun main() {
-    val notes = readNotes("../data/day08.txt")
-    println("Part 1: ${nEasyDigits(notes)}")
-}
+fun part1(path: String): Int = nEasyDigits(readNotes(path))
+fun part2(path: String): Int? = null

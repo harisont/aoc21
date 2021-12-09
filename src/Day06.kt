@@ -1,17 +1,17 @@
-package bho.harisont.aoc
+package bho.harisont.aoc.day06
 
 import java.io.File
 
 typealias Lanternfish = Int
 
-fun main() {
-    val fish = File("../data/day06.txt")
-                .readText()
-                .replace("\n", "")
-                .split(",")
-                .map { it.toInt() }
-                .toMutableList()
-        
+fun readCommaSeparatedInts(path: String) = File(path)
+                                            .readText()
+                                            .replace("\n", "")
+                                            .split(",")
+                                            .map { it.toInt() }
+                                            .toMutableList()
+
+fun nFish80(fish: MutableList<Int>): Int {    
     for (i in 1..80) {
         var nNews = 0
         for (f in 0..fish.size - 1) {
@@ -26,6 +26,9 @@ fun main() {
             fish.add(8)
         }
     }
-
-    println("Part 1: ${fish.size}")
+    return fish.size
 }
+
+
+fun part1(path: String): Int = nFish80(readCommaSeparatedInts(path))
+fun part2(path: String): Int? = null

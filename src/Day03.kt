@@ -1,4 +1,4 @@
-package bho.harisont.aoc
+package bho.harisont.aoc.day03
 
 import java.io.File
 
@@ -42,14 +42,5 @@ fun powerConsumption(diagnostic: Array<Array<Int>>): Int {
     return bin2dec(gamma) * bin2dec(epsilon)
 }
 
-fun test03(diagnostic: Array<Array<Int>>) {
-    assert(powerConsumption(diagnostic) == 2261546)
-}
-
-fun main() {
-    val diagnostic = readDiagnostic("../data/day03.txt")
-    test03(diagnostic)
-    println("Part 1: ${powerConsumption(diagnostic)}")
-    //val (h2,d2) = finalPosition2(route)
-    //println("Part 2: ${h2 * d2}")
-}
+fun part1(path: String): Int = powerConsumption(readDiagnostic(path))
+fun part2(path: String): Int? = null

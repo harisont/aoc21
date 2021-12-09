@@ -1,7 +1,8 @@
-package bho.harisont.aoc
+package bho.harisont.aoc.day04
 
 import java.io.File
-import bho.harisont.aoc.transpose as transpose
+
+import bho.harisont.aoc.day03.transpose
 
 class Cell(val n: Int, var marked: Boolean = false)
 
@@ -73,13 +74,6 @@ fun score(win: Pair<Board,Int>?): Int? {
     return null
 }
 
-fun test04(bingo: Bingo) {
-    val win = playBingo(bingo)
-    assert(score(win) == 16674)
-}
 
-fun main() {
-    val bingo = readBingo("../data/day04.txt")
-    val win = playBingo(bingo)
-    println("Part 1: ${score(win)}")
-}
+fun part1(path: String): Int? = score(playBingo(readBingo(path)))
+fun part2(path: String): Int? = null

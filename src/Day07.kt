@@ -1,13 +1,14 @@
-package bho.harisont.aoc
+package bho.harisont.aoc.day07
 
 import java.io.File
 import kotlin.math.abs
 
+import bho.harisont.aoc.day06.readCommaSeparatedInts
+
 typealias Pos = Int
 
-fun totCost(position: Pos, positions: List<Pos>): Pos {
-    return positions.map { abs(it - position) }.sum()
-}
+fun totCost(position: Pos, positions: List<Pos>): Pos =
+    positions.map { abs(it - position) }.sum()
 
 fun minCost(positions: MutableList<Pos>): Pos {
     positions.sort()
@@ -20,13 +21,6 @@ fun minCost(positions: MutableList<Pos>): Pos {
     return minCost
 }
 
-fun main () {
-    // TODO: generalize to also use in Six (and more), readCommaSeparatedInts
-    val positions = File("../data/day07.txt")
-                        .readText()
-                        .replace("\n", "")
-                        .split(",")
-                        .map { it.toInt() }
-                        .toMutableList()
-    println("Part 1: ${minCost(positions)}")
-}
+
+fun part1(path: String): Int = minCost(readCommaSeparatedInts(path))
+fun part2(path: String): Int? = null

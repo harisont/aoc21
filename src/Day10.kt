@@ -2,7 +2,6 @@ package bho.harisont.aoc.day10
 
 import java.io.File
 import java.util.ArrayDeque
-import kotlin.math.ceil
 
 typealias Stack = ArrayDeque<Char>
 
@@ -33,16 +32,12 @@ fun getFirstInvalidCharAndStack(s: String): Pair<Char?,Stack> {
 
 fun completionScore(stack: Stack): Int {
     var score = 0
-    for (c in stack.reversed()) {
+    for (c in stack)
         score = score * 5 + c.score()
-    }
     return score
 }
 
-fun middle(ns: MutableList<Int>): Int {
-    ns.sort()
-    return ns[(ceil((ns.size / 2).toFloat())).toInt()]
-}
+fun middle(ns: List<Int>): Int = ns[ns.size / 2]
 
 fun part1(path: String): Int = File(path).readLines()
                                 .map { getFirstInvalidCharAndStack(it) }
@@ -57,7 +52,5 @@ fun part2(path: String): Int {
         .filter { it.first == null }
         .map { it.second }
         .map { completionScore(it) }
-        .toMutableList()
-    return middle(scores)
+    return middle(scores.sorted())
 }
-

@@ -43,4 +43,4 @@ fun powerConsumption(diagnostic: Array<Array<Int>>): Int {
 }
 
 fun part1(path: String): Int = powerConsumption(readDiagnostic(path))
-fun part2(path: String): Int = TODO()
+fun part2(path: String): Int? = null

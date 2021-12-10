@@ -94,4 +94,4 @@ fun test05(linesOfVents: List<LineOfVents>) {
 
 fun part1(path: String): Int = 
     nOverlaps(linesOfVents2Diagram(readLinesOfVents(path)))
-fun part2(path: String): Int = TODO()
+fun part2(path: String): Int? = null

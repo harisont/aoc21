@@ -1,34 +1,38 @@
 package bho.harisont.aoc
 
-import bho.harisont.aoc.day01.part1 as day1part1 
-import bho.harisont.aoc.day01.part2 as day1part2 
-import bho.harisont.aoc.day02.part1 as day2part1 
-import bho.harisont.aoc.day02.part2 as day2part2 
-import bho.harisont.aoc.day03.part1 as day3part1
-import bho.harisont.aoc.day03.part2 as day3part2 
-import bho.harisont.aoc.day04.part1 as day4part1 
-import bho.harisont.aoc.day04.part2 as day4part2 
-import bho.harisont.aoc.day05.part1 as day5part1 
-import bho.harisont.aoc.day05.part2 as day5part2 
-import bho.harisont.aoc.day06.part1 as day6part1 
-import bho.harisont.aoc.day06.part2 as day6part2 
-import bho.harisont.aoc.day07.part1 as day7part1
-import bho.harisont.aoc.day07.part2 as day7part2 
-import bho.harisont.aoc.day08.part1 as day8part1 
-import bho.harisont.aoc.day08.part2 as day8part2  
-import bho.harisont.aoc.day09.part1 as day9part1 
-import bho.harisont.aoc.day09.part2 as day9part2 
+import bho.harisont.aoc.day01.part1 as day01part1 
+import bho.harisont.aoc.day01.part2 as day01part2 
+import bho.harisont.aoc.day02.part1 as day02part1 
+import bho.harisont.aoc.day02.part2 as day02part2 
+import bho.harisont.aoc.day03.part1 as day03part1
+import bho.harisont.aoc.day03.part2 as day03part2 
+import bho.harisont.aoc.day04.part1 as day04part1 
+import bho.harisont.aoc.day04.part2 as day04part2 
+import bho.harisont.aoc.day05.part1 as day05part1 
+import bho.harisont.aoc.day05.part2 as day05part2 
+import bho.harisont.aoc.day06.part1 as day06part1 
+import bho.harisont.aoc.day06.part2 as day06part2 
+import bho.harisont.aoc.day07.part1 as day07part1
+import bho.harisont.aoc.day07.part2 as day07part2 
+import bho.harisont.aoc.day08.part1 as day08part1 
+import bho.harisont.aoc.day08.part2 as day08part2  
+import bho.harisont.aoc.day09.part1 as day09part1 
+import bho.harisont.aoc.day09.part2 as day09part2 
+import bho.harisont.aoc.day10.part1 as day10part1 
+import bho.harisont.aoc.day10.part2 as day10part2 
 
 val funs = listOf(
-    Pair(day1part1("../data/day01.txt"), day1part2("../data/day01.txt")),
-    Pair(day2part1("../data/day02.txt"), day2part2("../data/day02.txt")),
-    Pair(day3part1("../data/day03.txt"), day3part2("../data/day03.txt")),
-    Pair(day4part1("../data/day04.txt"), day4part2("../data/day04.txt")),
-    Pair(day5part1("../data/day05.txt"), day5part2("../data/day05.txt")),
-    Pair(day6part1("../data/day06.txt"), day6part2("../data/day06.txt")),
-    Pair(day7part1("../data/day07.txt"), day7part2("../data/day07.txt")),
-    Pair(day8part1("../data/day08.txt"), day8part2("../data/day08.txt")),
-    Pair(day9part1("../data/day09.txt"), day9part2("../data/day09.txt"))
+    Pair(day01part1("../data/day01.txt"), day01part2("../data/day01.txt")),
+    Pair(day02part1("../data/day02.txt"), day02part2("../data/day02.txt")),
+    Pair(day03part1("../data/day03.txt"), day03part2("../data/day03.txt")),
+    Pair(day04part1("../data/day04.txt"), day04part2("../data/day04.txt")),
+    Pair(day05part1("../data/day05.txt"), day05part2("../data/day05.txt")),
+    Pair(day06part1("../data/day06.txt"), day06part2("../data/day06.txt")),
+    Pair(day07part1("../data/day07.txt"), day07part2("../data/day07.txt")),
+    Pair(day08part1("../data/day08.txt"), day08part2("../data/day08.txt")),
+    Pair(day09part1("../data/day09.txt"), day09part2("../data/day09.txt")),
+    Pair(day10part1("../data/day10.txt"), day10part2("../data/day10.txt"))
+
 )
 
 val dailyFuns = (1..25).toList().zip(funs).toMap()

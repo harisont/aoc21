@@ -7,13 +7,13 @@ I am taking part in AoC with a strictly non-competitive spirit, mostly to learn 
 Move into the `src` directory and compile with
 
 ```
-kotlinc Day*.kt Main.kt -include-runtime -d main.jar
+kotlinc Day*.kt Main.kt -include-runtime -d aoc21.jar
 ```
 
 Then run with
 
 ```
-java -jar main.jar
+java -jar aoc21.jar
 ```
 
 This will show the solutions of all the puzzles solved so far.
@@ -21,13 +21,13 @@ This will show the solutions of all the puzzles solved so far.
 Alternative, pass the days corresponding to the specific puzzles you want to solve as command line arguments:
 
 ```
-java -jar main.jar 1 5 30 03
+java -jar aoc21.jar 1 5 30 03
 ```
 
 This will solve, in this order, puzzle 1, 5 and 3 (skipping 30 as it's not a valid advent day).
 
 ## Lessons learned
-Here is a nonexhaustive list of the things I had to look up and learn, in no particular order:
+Here is a nonexhaustive list of the things I "had to"[¹](#notes) look up and learn, in no particular order:
 
 - [`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/), the Kotlin counterpart of Java `Object`s
 - how to [generalize `transpose`](https://stackoverflow.com/questions/70230712/generic-transpose-or-anything-else-really-in-kotlin/70230823#70230823) (or anything else that has something to do with arrays really)
@@ -41,3 +41,8 @@ Here is a nonexhaustive list of the things I had to look up and learn, in no par
   '1'.toString().toInt()
   ``` 
   is the way to go.
+- the Java [`ArrayDeque`](https://docs.oracle.com/javase/7/docs/api/java/util/ArrayDeque.html) class
+- [extension functions](https://kotlinlang.org/docs/extensions.html#extension-functions)
+
+#### Notes
+¹ Well, more often than not they were completely unnecessary but hey, I'd doing this to improve my Kotlin skills!

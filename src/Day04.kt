@@ -76,4 +76,4 @@ fun score(win: Pair<Board,Int>?): Int? {
 
 
 fun part1(path: String): Int? = score(playBingo(readBingo(path)))
-fun part2(path: String): Int? = null
+fun part2(path: String): Int = TODO()

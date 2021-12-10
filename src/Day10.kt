@@ -33,4 +33,4 @@ fun part1(path: String): Int = File(path).readLines()
                                 .map { it.score() }
                                 .sum()
                                 
-fun part2(path: String): Int? = null
+fun part2(path: String): Int = TODO()

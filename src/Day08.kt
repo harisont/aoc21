@@ -26,4 +26,4 @@ fun nEasyDigits(notes: List<Note>): Int {
 }
 
 fun part1(path: String): Int = nEasyDigits(readNotes(path))
-fun part2(path: String): Int? = null
+fun part2(path: String): Int = TODO()

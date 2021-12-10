@@ -23,4 +23,4 @@ fun minCost(positions: MutableList<Pos>): Pos {
 
 
 fun part1(path: String): Int = minCost(readCommaSeparatedInts(path))
-fun part2(path: String): Int? = null
+fun part2(path: String): Int = TODO()

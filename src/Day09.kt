@@ -42,4 +42,4 @@ fun riskLevel(n: Int): Int = n + 1
 fun part1(path: String): Int = lowPoints(readHeatmap(path))
                                 .map { riskLevel(it) }
                                 .sum() 
-fun part2(path: String): Int? = null
+fun part2(path: String): Int = TODO()

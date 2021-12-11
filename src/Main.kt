@@ -1,5 +1,7 @@
 package bho.harisont.aoc
 
+import java.io.File
+
 import bho.harisont.aoc.day01.part1 as day01part1 
 import bho.harisont.aoc.day01.part2 as day01part2 
 import bho.harisont.aoc.day02.part1 as day02part1 
@@ -42,6 +44,24 @@ val dailyFuns = (1..25).toList().zip(funs).toMap()
 
 val todo = "not implemented yet"
 
+fun readExpectedResults(path: String): List<Pair<Int?,Int?>> {
+    return File(path).readLines().map {
+        val split = it.split(",").map { it.toIntOrNull() }
+        Pair(split[0], split[1])
+    }
+}
+
+fun assess(expected: Int?, got: Int?): String {
+    if (got == null) 
+        return "TODO"
+    if (expected == null)
+        return "?  \t($got)"
+    if (expected != got)
+        return "KO \t($got)"
+    else
+        return "OK \t($got)"
+}
+
 fun main(args: Array<String>) {
     val range = 1..25
     val days = 
@@ -49,10 +69,16 @@ fun main(args: Array<String>) {
         else args
                 .map { it.toIntOrNull() }
                 .filter { it != null && it in range }
+    
+    val expected = readExpectedResults("../data/expected_output.csv")
 
     for (day in days) {
         println("Day $day:")
-        println("- part 1: ${dailyFuns.get(day)?.first ?: todo}")
-        println("- part 2: ${dailyFuns.get(day)?.second ?: todo}")
+        println("- part 1: ${
+            assess(expected[day!! - 1].first, dailyFuns.get(day)?.first)
+        }")
+        println("- part 2: ${
+            assess(expected[day - 1].second, dailyFuns.get(day)?.second)
+        }")
     }
 }   

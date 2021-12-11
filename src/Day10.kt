@@ -46,7 +46,7 @@ fun part1(path: String): Int = File(path).readLines()
                                 .map { it.score() }
                                 .sum()
                                 
-fun part2(path: String): Int {
+fun part2(path: String): Int { // TODO: fix
     val scores = File(path).readLines()
         .map { getFirstInvalidCharAndStack(it) }
         .filter { it.first == null }

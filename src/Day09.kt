@@ -5,7 +5,7 @@ import kotlin.text.toCharArray
 
 typealias Heatmap = List<List<Int>>
 
-fun readHeatmap(path: String): Heatmap {
+fun readIntGrid(path: String): List<List<Int>> {
     return File(path).readLines().map {
         it.toCharArray().map { it.toString().toInt() }
     }
@@ -39,7 +39,7 @@ fun lowPoints(heatmap: Heatmap): List<Int> {
 fun riskLevel(n: Int): Int = n + 1
 
 
-fun part1(path: String): Int = lowPoints(readHeatmap(path))
+fun part1(path: String): Int = lowPoints(readIntGrid(path))
                                 .map { riskLevel(it) }
                                 .sum() 
 fun part2(path: String): Int? = null

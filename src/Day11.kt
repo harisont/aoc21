@@ -51,4 +51,13 @@ fun part1(path: String): Int {
     return tot
 }
 
-fun part2(path: String): Int? = null
+fun part2(path: String): Int {
+    val grid = readIntGrid(path).map {it.toMutableList() }.toMutableList()
+    var step = 0
+    while (true) {
+        step(grid)
+        step++
+        if (grid.all { it.all { it == 0 } })
+            return step
+    }
+}

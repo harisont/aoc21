@@ -37,12 +37,9 @@ val funs = listOf(
     Pair(day09part1("../data/day09.txt"), day09part2("../data/day09.txt")),
     Pair(day10part1("../data/day10.txt"), day10part2("../data/day10.txt")),
     Pair(day11part1("../data/day11.txt"), day11part2("../data/day11.txt"))
-
 )
 
 val dailyFuns = (1..25).toList().zip(funs).toMap()
-
-val todo = "not implemented yet"
 
 fun readExpectedResults(path: String): List<Pair<Int?,Int?>> {
     return File(path).readLines().map {

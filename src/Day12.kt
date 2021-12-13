@@ -34,7 +34,6 @@ fun allPaths(
     dst: String="end"
 ) {
     if (src == dst) {
-        print(path)
         paths.add(path)
         return
     }

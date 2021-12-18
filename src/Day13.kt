@@ -73,10 +73,11 @@ fun part1(path: String): Int {
     val folded = fold(sheet, folds[0])
     return folded.map { it.filter { it }.size }.sum()
 }
+
 fun part2(path: String): Int {
-    val (points,folds) = readOrigamiInstructions(path)
-    val sheet = transparentSheet(points)
-    val folded = foldR(sheet,folds)
-    printSheet(folded)
+    //val (points,folds) = readOrigamiInstructions(path)
+    //val sheet = transparentSheet(points)
+    //val folded = foldR(sheet,folds)
+    //printSheet(folded)
     return 0
 } 

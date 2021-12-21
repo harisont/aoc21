@@ -43,6 +43,7 @@ Here is a nonexhaustive list of the things I "had to"[¹](#notes) look up and le
   is the way to go.
 - the Java [`ArrayDeque`](https://docs.oracle.com/javase/7/docs/api/java/util/ArrayDeque.html) class
 - [extension functions](https://kotlinlang.org/docs/extensions.html#extension-functions)
+- [collection grouping](https://kotlinlang.org/docs/collection-grouping.html)
 
 #### Notes
-¹ Well, more often than not they were completely unnecessary but hey, I'd doing this to improve my Kotlin skills!
+¹ Well, more often than not they were completely unnecessary but hey, I'm doing this to improve my Kotlin skills!

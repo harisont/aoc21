@@ -32,6 +32,10 @@ import bho.harisont.aoc.day14.part1 as day14part1
 import bho.harisont.aoc.day14.part2 as day14part2
 import bho.harisont.aoc.day15.part1 as day15part1
 import bho.harisont.aoc.day15.part2 as day15part2
+import bho.harisont.aoc.day20.part1 as day20part1
+import bho.harisont.aoc.day20.part2 as day20part2
+import bho.harisont.aoc.day21.part1 as day21part1
+import bho.harisont.aoc.day21.part2 as day21part2
 
 val funs = listOf(
     Pair(day01part1("../data/day01.txt"), day01part2("../data/day01.txt")),
@@ -47,8 +51,7 @@ val funs = listOf(
     Pair(day11part1("../data/day11.txt"), day11part2("../data/day11.txt")),
     Pair(day12part1("../data/day12.txt"), day12part2("../data/day12.txt")),
     Pair(day13part1("../data/day13.txt"), day13part2("../data/day13.txt")),
-    Pair(day14part1("../data/day14.txt"), day14part2("../data/day14.txt")),
-    Pair(day15part1("../data/day15.txt"), day15part2("../data/day15.txt"))
+    Pair(day14part1("../data/day14.txt"), day14part2("../data/day14.txt"))
 )
 
 val dailyFuns = (1..25).toList().zip(funs).toMap()
